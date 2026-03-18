@@ -2,160 +2,149 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Detetive - Ficha</title>
+<title>Detetive - Ficha Mesa</title>
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background: #2a2010;
-  font-family: 'Courier New', monospace;
-}
-.ficha {
-  width: 100%;
-  height: 100vh;
-  background: #e8dfc0;
-  border: 3px solid #4a5e2a;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  position: relative;
-}
-.faixa-lateral {
-  position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 42px;
-  background: #4a5e2a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.faixa-lateral span {
-  color: #e8dfc0;
-  font-size: 16px;
-  font-weight: bold;
-  letter-spacing: 4px;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  text-transform: uppercase;
-}
-.main {
-  margin-left: 42px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-.topo {
-  background: #4a5e2a;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 16px 8px 10px;
-  gap: 12px;
-  flex-shrink: 0;
-}
-.titulo-jogo {
-  color: #e8dfc0;
-  font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-}
-.nome-area { display: flex; align-items: center; gap: 8px; }
-.nome-label {
-  color: #c8d890;
-  font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-.nome-input {
-  background: transparent;
-  border: none;
-  border-bottom: 2px solid #c8d890;
-  color: #e8dfc0;
-  font-family: 'Courier New', monospace;
-  font-size: 20px;
-  font-weight: 500;
-  width: 280px;
-  outline: none;
-  text-align: center;
-}
-.btn-limpar {
-  background: transparent;
-  border: 1.5px solid #c8d890;
-  color: #c8d890;
-  font-size: 14px;
-  padding: 4px 12px;
-  cursor: pointer;
-  border-radius: 2px;
-  font-family: 'Courier New', monospace;
-  letter-spacing: 2px;
-}
-.btn-limpar:hover { background: rgba(200,216,144,0.2); }
-.colunas {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  flex: 1;
-  overflow: hidden;
-}
-.col {
-  border-right: 2px solid #4a5e2a;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-.col:last-child { border-right: none; }
-.col-header {
-  background: #4a5e2a;
-  color: #e8dfc0;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  padding: 8px 0;
-  text-transform: uppercase;
-  flex-shrink: 0;
-}
-.col-items { flex: 1; display: flex; flex-direction: column; }
-.item {
-  display: flex;
-  align-items: center;
-  padding: 0 12px;
-  gap: 10px;
-  border-bottom: 1px solid rgba(74,94,42,0.22);
-  cursor: pointer;
-  flex: 1;
-}
-.item:last-child { border-bottom: none; }
-.item:hover { background: rgba(74,94,42,0.08); }
-.item-name {
-  flex: 1;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.3;
-  color: #2a2010;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.checks { display: flex; gap: 6px; flex-shrink: 0; }
-.ck {
-  width: 30px;
-  height: 30px;
-  border: 2px solid #4a5e2a;
-  background: #faf5e4;
-  border-radius: 3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: bold;
-  color: #8b1a1a;
-  cursor: pointer;
-}
-.ck:hover { background: #d8cc98; }
-.ck.on { background: #b8a860; color: #6b0a0a; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #2a2010;
+    font-family: 'Courier New', monospace;
+  }
+  .ficha {
+    width: 100%;
+    height: 100vh;
+    background: #e8dfc0;
+    border: 3px solid #4a5e2a;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+  }
+  .faixa-lateral {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 42px;
+    background: #4a5e2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .faixa-lateral span {
+    color: #e8dfc0;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-transform: uppercase;
+  }
+  .main {
+    margin-left: 42px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .topo {
+    background: #4a5e2a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px 8px 10px;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+  .titulo-jogo {
+    color: #e8dfc0;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+  }
+  .nome-area { display: flex; align-items: center; gap: 8px; }
+  .nome-label { color: #c8d890; font-size: 20px; letter-spacing: 2px; }
+  .nome-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1.5px solid #c8d890;
+    color: #e8dfc0;
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    width: 260px;
+    outline: none;
+    text-align: center;
+  }
+  .btn-limpar {
+    background: transparent;
+    border: 1.5px solid #c8d890;
+    color: #c8d890;
+    font-size: 12px;
+    padding: 4px 12px;
+    cursor: pointer;
+    border-radius: 2px;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+  }
+  .btn-limpar:hover { background: rgba(200,216,144,0.2); }
+  .colunas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex: 1;
+    overflow: hidden;
+  }
+  .col {
+    border-right: 2px solid #4a5e2a;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .col:last-child { border-right: none; }
+  .col-header {
+    background: #4a5e2a;
+    color: #e8dfc0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: 8px 0;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+  .col-items { flex: 1; display: flex; flex-direction: column; }
+  .item {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    gap: 8px;
+    border-bottom: 1px solid rgba(74,94,42,0.22);
+    cursor: pointer;
+    flex: 1;
+  }
+  .item:last-child { border-bottom: none; }
+  .item:hover { background: rgba(74,94,42,0.08); }
+  .item-name {
+    flex: 1;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #2a2010;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .checks { display: flex; gap: 6px; flex-shrink: 0; }
+  .ck {
+    width: 30px; height: 30px;
+    border: 1.5px solid #4a5e2a;
+    background: #faf5e4;
+    border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; font-weight: bold; color: #8b1a1a;
+    cursor: pointer;
+  }
+  .ck:hover { background: #d8cc98; }
+  .ck.on { background: #b8a860; color: #6b0a0a; }
 </style>
 </head>
 <body>
@@ -175,9 +164,9 @@ html, body {
 </div>
 <script>
 const dados = {
-  suspeitos: ["Sgt. Bigode","Florista D. Branca","Chef Tony Gourmet","Mordomo Jones","M\u00e9dica D. Violeta","Dan\u00e7arina Srta. Rosa","Coveiro S. Soturno","Advogado Sr. Marinho"],
-  armas: ["Espingarda","P\u00e1","P\u00e9-de-Cabra","Tesqua","Arma Qu\u00edmica","Veneno","Soco Ingl\u00eas","Faca"],
-  locais: ["Prefeitura","Restaurante","Floricultura","Boate","Hospital","Mans\u00e3o","Cemit\u00e9rio","Pra\u00e7a","Hotel","Banco","Est. de Trem"]
+  suspeitos: ["Sgt. Bigode","Florista D. Branca","Chef Tony Gourmet","Mordomo Jones","Médica D. Violeta","Dançarina Srta. Rosa","Coveiro S. Soturno","Advogado Sr. Marinho"],
+  armas: ["Espingarda","Pá","Pé-de-Cabra","Tesqua","Arma Química","Veneno","Soco Inglês","Faca"],
+  locais: ["Prefeitura","Restaurante","Floricultura","Boate","Hospital","Mansão","Cemitério","Praça","Hotel","Banco","Est. de Trem"]
 };
 function toggle(ck) {
   if (ck.classList.contains('on')) { ck.classList.remove('on'); ck.textContent=''; }
@@ -186,13 +175,13 @@ function toggle(ck) {
 function limpar() {
   document.querySelectorAll('.ck').forEach(c => { c.classList.remove('on'); c.textContent=''; });
 }
-function mkCol(titulo, itens) {
+function mkCol(titulo, itens, pref) {
   const col = document.createElement('div');
   col.className = 'col';
-  col.innerHTML = '<div class="col-header">' + titulo + '</div>';
+  col.innerHTML = `<div class="col-header">${titulo}</div>`;
   const wrap = document.createElement('div');
   wrap.className = 'col-items';
-  itens.forEach(nome => {
+  itens.forEach((nome, i) => {
     const row = document.createElement('div');
     row.className = 'item';
     const nm = document.createElement('span');
@@ -217,9 +206,9 @@ function mkCol(titulo, itens) {
   return col;
 }
 const cols = document.getElementById('cols');
-cols.appendChild(mkCol('SUSPEITOS', dados.suspeitos));
-cols.appendChild(mkCol('ARMAS', dados.armas));
-cols.appendChild(mkCol('LOCAIS', dados.locais));
+cols.appendChild(mkCol('SUSPEITOS', dados.suspeitos, 's'));
+cols.appendChild(mkCol('ARMAS', dados.armas, 'a'));
+cols.appendChild(mkCol('LOCAIS', dados.locais, 'l'));
 </script>
 </body>
 </html>
